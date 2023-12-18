@@ -10,7 +10,7 @@ app.use(express.json());
 app.get('/ping', (req, res) => {
     res.status(200).json({ message: 'PONG' })
 })
-app.use('/api/v1', productRoutes);
+app.use('/api/v1/products', productRoutes);
 app.use('/api/v1/users', userRoutes);
 
 app.listen(PORT, () => {

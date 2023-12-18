@@ -5,12 +5,12 @@ const { createProduct, getProducts, getProductById,
 const router = require('express').Router();
 
 // protected route
-router.post('/products', ensureAuthenticated, createProduct);
-router.get('/products', getProducts);
-router.get('/products/:id', getProductById);
+router.post('/', ensureAuthenticated, createProduct);
+router.get('/', getProducts);
+router.get('/:id', getProductById);
 // protected route
-router.put('/products/:id', ensureAuthenticated, updateProductById)
+router.put('/:id', ensureAuthenticated, updateProductById)
 // protected route
-router.delete('/products/:id', ensureAuthenticated, deleteProductById)
+router.delete('/:id', ensureAuthenticated, deleteProductById)
 
 module.exports = router;
