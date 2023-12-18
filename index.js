@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 8080;
 // to parse POST json body
 app.use(express.json());
 
-app.use('/api/v1/', productRoutes);
+app.use('/api/v1', productRoutes);
 app.use('/api/v1/users', userRoutes);
 
 app.listen(PORT, () => {
