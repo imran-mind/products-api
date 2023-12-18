@@ -7,7 +7,9 @@ require('./db');
 const PORT = process.env.PORT || 8080;
 // to parse POST json body
 app.use(express.json());
-
+app.get('/ping', (req, res) => {
+    res.status(200).json({ message: 'PONG' })
+})
 app.use('/api/v1', productRoutes);
 app.use('/api/v1/users', userRoutes);
 
